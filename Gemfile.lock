@@ -27,7 +27,6 @@ PLATFORMS
 
 DEPENDENCIES
   json
-  mail
   pony
   shotgun
   sinatra
