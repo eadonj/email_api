@@ -4,6 +4,10 @@ require 'json'
 
 post '/' do
   content_type :json
-  Pony.mail(:to => 'eadonj@gmail.com', :from => 'noreply@example.com', :subject => "subject", :body => "body")
+  content = JSON.parse(request.env["rack.request.form_vars"])
+  recipeient = content["to"].match(/.*<(.*)>/)[1]
+  Pony.mail to: recipeient,
+            from: 'noreply@example.com',
+            subject: content['subject'],
+            body: content['body']
 end
-

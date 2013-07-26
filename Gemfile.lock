@@ -1,5 +1,4 @@
 GEM
-  remote: http://rubygems.org/
   specs:
     json (1.8.0)
     mail (2.5.4)
@@ -28,6 +27,7 @@ PLATFORMS
 
 DEPENDENCIES
   json
+  mail
   pony
   shotgun
   sinatra
