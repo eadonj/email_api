@@ -22,7 +22,7 @@ describe 'Email Api App' do
 	it 'sends email' do 
     Pony.should_receive(:deliver) do |mail|
     	mail.to.should == ['example@gmail.com']
-    	mail.from.should ['noreply@example.com']
+    	mail.from.should == ['noreply@example.com']
     	mail.subject.should == 'hi'
     	mail.body.should == 'hello email world'
     end
