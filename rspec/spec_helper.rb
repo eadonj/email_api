@@ -3,7 +3,7 @@ require 'rack/test'
 
 
 def app
-	Sinatra::Application
+  Sinatra::Application
 end
 
 RSpec.configure do |conf|
