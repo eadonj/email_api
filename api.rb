@@ -22,7 +22,7 @@ end
 post '/' do
   content_type :json
   content = JSON.parse(request.env["rack.request.form_vars"])
-  recipeient = content["to"].match(/.*<(.*)>/)[1]
+  recipient = content["to"].match(/.*<(.*)>/)[1]
   Pony.options = settings.email_options
-  Pony.mail(to: recipeient, from: 'noreply@example.com', subject: content['subject'], body: content['body'])
+  Pony.mail(to: recipient, subject: content['subject'], body: content['body'])
 end
