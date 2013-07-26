@@ -4,6 +4,7 @@ require 'json'
 
 
 post '/' do
+	content_type :json
   content = JSON.parse(request.env["rack.request.form_vars"])
   recipient = content["to"].match(/.*<(.*)>/)[1]
   Pony.mail to: recipient, 
