@@ -1,2 +1,2 @@
-require '/emailapi'
+require './emailapi'
 run Sinatra::Application

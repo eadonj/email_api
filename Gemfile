@@ -1,6 +1,9 @@
-require 'rubygems'
+source 'https://rubygems.org'
 
 gem 'sinatra'
 gem 'json'
-gem 'shotgun'
 gem 'pony'
+
+group :development do 
+  gem 'shotgun'
+end
